@@ -11,7 +11,7 @@ app.secret_key = "jeomaira"
 #Rutas de las carpetas 
 app._static_folder = os.path.abspath("templates/static")
 #Ruta de la página principal
-@app.route("/", methods=["GET"])
+@app.route("/")
 
 def index():
     """

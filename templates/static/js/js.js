@@ -1,17 +1,17 @@
 $(document).ready(function() {
-    $('#basic-form').validate({
+    $('#basicform').validate({
         /**Reglas de validación */
         rules:{
             
             //Se requiere que ingrese el nombre y tengan una logitud de al menos 3 caracteres
             fname: {
                 required:true,
-                minlength:3
+                minlength:5
             },
 
             lname: {
                 required:true,
-                minlength:3
+                minlength:5
             },
              //Se requiere que ingrese el correo electrónico
             email: {
@@ -25,7 +25,7 @@ $(document).ready(function() {
             //Se requiere que ingrese el mensaje y tengan una logitud de al menos 10 caracteres
             mensaje:{
                 required:true,
-                minlength:100
+                minlength:10
             },
             
             //Se requiere que ingrese el captcha y tengan una logitud de al menos 2 caracteres
@@ -42,26 +42,39 @@ $(document).ready(function() {
         },
             //mensajes de las reglas de validación
             messages:{
-                nombre:{
-                    required:"Ingrese su nombre",
-                    minlength:"Debe tener al menos 3 caracteres"
+                fname:{
+                    required:"Inserte su nombre",
+                    minlength:"Ingrese los caracteres necesarios al menos 5"
+
+                }
+                ,
+                lname:{
+                    required:"Inserte sus apellidos",
+                    minlength:"Ingrese los caracteres necesarios al menos 5"
+
+                }
+                ,
+                age:{
+                    required:"Inserte su edad",
+                    minlength:"La edad debe contener al menos 2 numeros"
 
                 }
                 ,
                 email:{
-                    required:"Ingrese su correo electronico"
+                    required:"Inserte su correo electronico"
                 },
-                subject:{
-                    required:"Ingrese el subject o tema",
-                    minlength:"Debe tener al menos 10 caracteres"
-                },
+
                 mensaje:{
-                    required:"Ingrese el mensaje",
-                    minlength:"Debe tener al menos 10 caracteres"
+                    required:"Agregue un mensaje",
+                    minlength:"Escribir mas de 10 caracteres"
                 },
                 captcha:{
-                    required:"Ingrese el codigo",
-                    minlength:"Debe tener al menos 2 caracteres"
+                    required:"Escriba lo que esta en la imagen",
+                    minlength:"Inserte caracteres superior a 2"
+                },
+                          
+                gridCheck:{
+                    required:"Confirmación"
                 }
 
             },
