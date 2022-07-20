@@ -2,18 +2,16 @@
 #Importar libreria
 import os
 from flask import Flask, render_template, request
-
 #Instancia de la aplicación
 app = Flask(__name__)
 #Contraseña secreta de la aplicación
 app.secret_key = "jeomaira"
-app.debug = False
+
 
 #Rutas de las carpetas 
-app._static_folder = os.path.abspath("templates/static/")
-
+app._static_folder = os.path.abspath("templates/static")
 #Ruta de la página principal
-@app.route("/")
+@app.route("/", methods=["GET"])
 
 def index():
     """

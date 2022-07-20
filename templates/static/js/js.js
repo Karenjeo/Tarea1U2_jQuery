@@ -30,9 +30,15 @@ $(document).ready(function() {
             
             //Se requiere que ingrese el captcha y tengan una logitud de al menos 2 caracteres
             captcha:{
-                required:true,
-                minlength:2
+                minlength:2,
+                required: true, 
+                    
+                
             },
+            //Se requiere marcar
+            gridCheck:{
+                required:true
+            }
         },
             //mensajes de las reglas de validación
             messages:{
