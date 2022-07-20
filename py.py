@@ -1,31 +1,30 @@
-#Import libraries
+
+#Importar libreria
 import os
-from flask import Flask, render_template
-from pyquery import PyQuery as pq
+from flask import Flask, render_template, request
 
-
+#Instancia de la aplicación
 app = Flask(__name__)
-app.secret_key = "LC"
+#Contraseña secreta de la aplicación
+app.secret_key = "jeomaira"
 app.debug = False
+
+#Rutas de las carpetas 
 app._static_folder = os.path.abspath("templates/static/")
 
-#Funcion controladora para mostrar la página principal
-#Definicion de la ruta por defecto
-@app.route("/", methods=["GET"])
-#Llamar a index
+#Ruta de la página principal
+@app.route("/")
+
 def index():
     """
-        Creates the index page with all of its attributes.
-        Parameters
-        ----------
-        None
-        Returns
-        -------
-        The index page rendered
+    Renderizar la página principal
+    Retorno
+    ------
+    Página principal renderizada
     """
-    # Creates the input image
-    return render_template("/layouts/index.html")
 
-#Funcion main del programa
+    return render_template("layouts/index.html")
+
+#Función main de la aplicacion
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug = True)
